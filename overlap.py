@@ -1,0 +1,127 @@
+from collections import Counter
+from tkinter import W
+import da_shapes
+import folium
+
+from shapely.geometry import Polygon, MultiPolygon, box as Box, Point
+from voronoi import Vor
+
+da_ids = [33079, 32657, 32659]
+
+# da_ids = list(da_shapes.da_for_prefix('3530'))
+# print(len(da_ids))
+
+COLOR = {
+    'tims': 'crimson',
+    'mcds': 'yellow',
+    'sbux': 'green',
+}
+
+
+def plot_points(V):
+    for (tag, points) in V.points.items():
+        for pt in points:
+            folium.CircleMarker(
+                location=pt,
+                color=COLOR[tag],
+                radius=5,
+                fill=False
+            ).add_to(m)
+
+
+def plot_region(m: folium.Map, tag, region: Polygon, desc=''):
+    folium.Polygon(
+        region.exterior.coords,
+        color=COLOR[tag],
+        # fill_color='white',
+        radius=5,
+        fill=True,
+        tooltip=desc,
+        # fill_opacity=0,
+    ).add_to(m)
+
+
+def plot_overlap(tag, overlap):
+    if isinstance(overlap, MultiPolygon):
+        polys = list(overlap.geoms)
+    else:
+        polys = [overlap]
+    for poly in polys:
+        folium.Polygon(
+            poly.exterior.coords,
+            color=COLOR[tag],
+            radius=5,
+            fill=True,
+            weight=0,
+        ).add_to(m)
+
+
+def do_overlap(m, tag, region, da):
+    overlap = region.intersection(da.poly)
+
+    pct = overlap.area / da.poly.area
+    pop = round(pct*da.pop)
+    # print(pct * da.pop, pct, da.pop)
+    desc = f'tag = {tag} da = {da.id}, pop = {pop}'
+
+    # plot_overlap(tag, overlap)
+    return pop
+
+
+das = list(da_shapes.da_for_prefix(''))
+
+
+all_das = MultiPolygon(da.poly for da in das)
+bound = Box(*all_das.bounds)
+hull = all_das.convex_hull
+
+hull_points = [(67.86276731391153, -141.0141432907288), (60.308041435828535, -140.99797094202646), (53.04503868101154, -132.53322144505745), (52.8001372885327, -132.23555626424874), (52.800071769304395, -132.23547245926292), (52.219900166005814, -131.42763044987163), (51.96836056521965, -131.0746981673807), (51.952899378201785, -131.05018717386702), (50.11346597620711, -127.91608865927279), (50.11296326859864, -127.91523203937561), (49.38237796443927, -126.54486204508358), (49.38092526557855, -126.54173806716985), (49.380888264726536, -126.5416580268614), (48.920798876775635, -125.5418961493723), (48.72111334856672, -125.0997059447439), (48.59347285709223, -124.71474435263299), (48.57308094814164, -124.64423654482661), (48.37656426673605, -123.92111194915692), (48.31381225657488, -123.65431454172632), (41.681379213880426, -82.68599587392913), (41.681356911865606, -82.68567086742175), (41.681326204512345, -82.68469687040829), (41.681320303727844, -82.68448045971071), (41.68133708971445, -82.68395226438251), (41.68137289425293, -82.68335246254766), (41.68139409447117, -82.68313675915415), (43.38969149230883, -65.6220105040398), (43.38973500588508, -65.62172528812975), (43.39041110914293, -65.61786269189871), (46.62465899600508, -53.162213992468416),
+               (46.64156660509429, -53.101679494639825), (46.64160970652151, -53.10154918404225), (46.643430697130825, -53.096787217974146), (46.64568329867162, -53.09158831775805), (46.645796903437, -53.091378680631784), (46.656459607514826, -53.07431319641626), (46.657743006320565, -53.07285280985254), (46.78488539523409, -52.95251492018752), (46.78570790647368, -52.951813795737905), (46.78581029772282, -52.951730723482875), (46.81597128852977, -52.93727960189869), (47.48390390813454, -52.634098214849764), (47.523294192975364, -52.619366289675774), (47.523615102604204, -52.619413599027425), (48.14317499018623, -52.79024760663184), (48.15992229382251, -52.79524871599138), (48.59895780184776, -52.995692210265524), (48.608487300898226, -53.00050868139427), (67.5193589957423, -63.7279037742354), (67.5401714044127, -63.750164914916034), (67.54158931246995, -63.75182309973031), (67.54335189316943, -63.754450524855876), (70.52450507666009, -68.28795960982586), (76.57838123217245, -82.42740196390919), (76.58047852203066, -82.92615421200603), (76.58108075264346, -83.1325781555195), (72.08759971287245, -125.58833516751247), (68.68060829575349, -140.69007165905504), (68.55773473445325, -141.01340314181556), (67.86276731391153, -141.0141432907288)]
+
+
+m = folium.Map(location=hull.representative_point().coords[0])
+
+# for da in das:
+#    folium.Polygon(da.points(), weight=1, fill=True,
+#                   tooltip=f'{da.id} pop={da.pop}').add_to(m)
+
+
+# V = Vor.within(box=bound)
+V = Vor.nearby()
+
+regions = [(tag, region.intersection(hull))
+           for (tag, region) in V.regions()]
+print('all regions:', len(regions))
+regions = [(tag, region) for (tag, region) in regions if not region.is_empty]
+#regions = list(V.regions())
+print('regions:',
+      f'regions={len(regions)} points={sum(len(r[1].exterior.coords) for r in regions)}')
+plot_points(V)
+
+c = 0
+D = Counter()
+# for (tag, region) in regions:
+#    plot_region(m, tag, region, None)
+for (ix, (tag, region)) in enumerate(regions):
+    if ix % 100 == 0:
+        print(ix)
+    else:
+        print('.', end='')
+    reg_pop = 0
+    reg_n = 0
+    for da in das:
+        if not region.intersects(da.poly):
+            continue
+
+        c += 1
+        pop = do_overlap(m, tag, region, da)
+        reg_pop += pop
+        reg_n += 1
+        D[tag] += pop
+    plot_region(m, tag, region, f'tag={tag} pop={reg_pop} n={reg_n}')
+print('')
+
+print('overlaps:', c)
+print(D)
+print(sum(D.values()), sum(da.pop for da in das))
+m.save('overlap.html')

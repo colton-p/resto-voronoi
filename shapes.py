@@ -1,8 +1,11 @@
-import matplotlib
+#import matplotlib
+import near
+import csv
 import shapefile
 import pyproj
 import folium
 import itertools
+import haversine
 
 
 def pairwise(iterable):
@@ -16,8 +19,8 @@ def can_tx(x, y): return can_txer.transform(x, y)
 def us_tx(x, y): return y, x
 
 
-us = shapefile.Reader('shapes/us/cb_2018_us_nation_20m')
-can = shapefile.Reader('shapes/canada/lpr_000a21a_e', encoding='latin1')
+# us = shapefile.Reader('shapes/us/cb_2018_us_nation_20m')
+# can = shapefile.Reader('shapes/canada/lpr_000a21a_e', encoding='latin1')
 m = folium.Map(location=[43.5, -80.5])
 
 
@@ -56,9 +59,42 @@ def plot_sf(m, sf, tx):
         folium.Polygon(poly).add_to(m)
 
 
-# plot_shape(m, us.shape(0), us_tx)
+PREFIX = '3530'
+POP = {}
+with open('census/data/full.csv', 'r') as csvfile:
+    for line in csv.reader(csvfile):
+        if line[1][:4] == PREFIX:
+            POP[line[0]] = int(line[-1])
 
-def main():
+sf = shapefile.Reader('shapes/canada_census/lda_000b21a_e')
+
+for (ix, sr) in enumerate(sf.iterShapeRecords()):
+    shape = sr.shape
+
+    if sr.record[0][:4] != '3530':
+        continue
+    polys = shape_to_polys(shape, can_tx)
+    if len(polys) > 1:
+        continue
+    poly = polys[0]
+
+    pt = poly[0]
+    if haversine.haversine(pt, (43.46, -80.53)) > 10:
+        continue
+
+    folium.Polygon(
+        poly,
+        fill=True,
+        popup=f'id={sr.record[0]} pop={POP[sr.record[1]]}'
+    ).add_to(m)
+    print(ix, sr.record)
+
+# near.near(m, (43.46, -80.53), 20)
+
+m.save('shapes.html')
+
+
+def xmain():
     paths = []
     good_points = []
     for shape in can.shapes():  # [:10]:
@@ -89,5 +125,6 @@ def main():
     m.save('shapes.html')
 
 
-main()
+#
+# main()
 #print('shapes:', len(us.shapes()))
