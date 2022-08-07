@@ -154,7 +154,6 @@ class Vor:
                 yield(tag, region)
 
     def regions_dict(self, finite=True):
-        print(finite)
         point_labels = list(itertools.chain(
             *[[tag] * len(self.points[tag]) for tag in self.points]
         ))
@@ -167,7 +166,7 @@ class Vor:
         else:
             point_region = [vor.regions[ix] for ix in vor.point_region]
             vertices = vor.vertices
-        print(len(point_region), len(point_labels))
+
         for (point_ix, region) in enumerate(point_region):
 
             tag = point_labels[point_ix]

@@ -1,5 +1,5 @@
+import time
 from collections import Counter
-from tkinter import W
 import da_shapes
 import folium
 
@@ -64,43 +64,102 @@ def overlap_pop(region, da):
     return pop
 
 
-das = list(da_shapes.da_for_prefix('13'))
+def compute_overlaps(regions, das):
+    n_overlaps = 0
+    totals = Counter()
+
+    for (ix, (tag, region)) in enumerate(regions):
+        if ix % 100 == 0:
+            print('\t', ix, '...')
+
+        reg_pop = 0
+        reg_n = 0
+        for da in das:
+            if not region.intersects(da.poly):
+                continue
+
+            pop = overlap_pop(region, da)
+            n_overlaps += 1
+            reg_n += 1
+            reg_pop += pop
+            totals[tag] += pop
+        plot_region(m, tag, region, f'tag={tag} pop={reg_pop} n={reg_n}')
+
+    return totals, n_overlaps
+
+
+def compute_overlaps2(regions, das):
+    n_overlaps = 0
+    totals = Counter()
+
+    remaining_das = {da.id: da for da in das}
+
+    for (ix, (tag, region)) in enumerate(regions):
+        if ix % 1000 == 0:
+            print('\t', ix, '...', len(remaining_das))
+
+        reg_pop = reg_n = 0
+        covered_das = set()
+        for da in remaining_das.values():
+            if not region.intersects(da.poly):
+                continue
+
+            if region.covers(da.poly):
+                covered_das.add(da.id)
+
+            pop = overlap_pop(region, da)
+            n_overlaps += 1
+            reg_n += 1
+            reg_pop += pop
+            totals[tag] += pop
+        plot_region(m, tag, region, f'tag={tag} pop={reg_pop} n={reg_n}')
+
+        # for k in covered_das:
+        #    del remaining_das[k]
+        remaining_das = {
+            k: v for (k, v) in remaining_das.items() if k not in covered_das}
+
+    print(len(das), '-->', len(remaining_das))
+    return totals, n_overlaps
+
+
+PREFIX = '3530'
+PLOT_DAS = True
+PLOT_POINTS = True
+
+
+t0 = time.time()
+das = list(da_shapes.da_for_prefix(PREFIX))
+t1 = time.time()
+print('das time:', t1-t0)
 das_hull = hull_for_das(das)
 
 m = folium.Map(location=das_hull.representative_point().coords[0])
 
+if PLOT_DAS:
+    for da in das:
+        folium.Polygon(da.poly.exterior.coords, color='blue',
+                       fill=False, weight=1, dash_array='4').add_to(m)
+
 V = Vor.within(das_hull)
 points = V.points
 print('points:', ' '.join(f'{t}={len(p)}' for (t, p) in points.items()))
-plot_points(points)
+if PLOT_POINTS:
+    plot_points(points)
 
 regions = V.clipped_regions(das_hull, finite=True)
 print(
-    f'regions={len(regions)} points={sum(len(r[1].exterior.coords) for r in regions)}'
+    f'regions:', f'shapes={len(regions)} points={sum(len(r[1].exterior.coords) for r in regions)}'
 )
 
-n_overlaps = 0
-totals = Counter()
 
-for (ix, (tag, region)) in enumerate(regions):
-    if ix % 100 == 0:
-        print(ix, '...')
-
-    reg_pop = 0
-    reg_n = 0
-    for da in das:
-        if not region.intersects(da.poly):
-            continue
-
-        pop = overlap_pop(region, da)
-        n_overlaps += 1
-        reg_n += 1
-        reg_pop += pop
-        totals[tag] += pop
-    plot_region(m, tag, region, f'tag={tag} pop={reg_pop} n={reg_n}')
-print('')
+t0 = time.time()
+totals, n_overlaps = compute_overlaps2(regions, das)
+t1 = time.time()
+print('overlap time:', t1-t0)
 
 print(f'overlaps={n_overlaps}')
+print('')
 print(f'total={sum(totals.values())} da_total={sum(da.pop for da in das)}')
 print(dict(totals))
 m.save('overlap.html')

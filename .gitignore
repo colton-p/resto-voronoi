@@ -1,3 +1,6 @@
 fetch/raw_data/*
 fetch/data/*
 census/data/*
+shapes/canada_census/*
+
+__pycache__

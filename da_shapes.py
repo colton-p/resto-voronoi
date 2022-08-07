@@ -56,11 +56,11 @@ def das_from_sr(sr):
     polys = [Polygon(points) for points in shape_to_polys(shape)]
     total_area = sum(p.area for p in polys)
 
-    for poly in polys:
+    for (part_ix, poly) in enumerate(polys):
         pop = int(total_pop*poly.area / total_area)
         if pop > 0:
             yield Da(
-                id=record[0],
+                id=f'{record[0]}-{part_ix}',
                 poly=poly,
                 pop=pop,
             )
