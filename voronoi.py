@@ -103,7 +103,11 @@ def load_records(pred=lambda x, y: True):
             all_data[tag] = [(lat, lon) for
                              (id, name, state, ctry, lat, lon)
                              in data
-                             if pred(lat, lon) and ctry in ['CA', 'Canada']]
+                             if pred(lat, lon)
+                             # and ctry in ['US', 'United States', 'CA', 'Canada']
+                             # and ctry in ['US', 'USA']
+                             # and ctry in ['CA', 'Canada']
+                             ]
     return all_data
 
 
