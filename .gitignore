@@ -1,12 +1,4 @@
-fetch/raw_data/*
-fetch/data/*
-census/canada/data/*
-census/us/data/*
-census/us/*.csv
-census/canada/*.csv
-shapes/canada_census/*
-shapes/us_census/*
-out.html
-overlap.html
-
+.pytest_cache/
 __pycache__
+
+data/
