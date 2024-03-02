@@ -1,0 +1,1370 @@
+{
+  "ResultData": [
+    {
+      "LocationId": {
+        "StoreNumber": 16854,
+        "SatelliteNumber": 0
+      },
+      "Address": {
+        "Address1": "275 Hillside Drive South",
+        "Address2": "",
+        "Address3": "Hillside Plaza",
+        "City": "Elliot Lake",
+        "StateProvCode": "ON",
+        "PostalCode": "P5A 1N7",
+        "CountryCode": "CA",
+        "CountryCode3": "CAN"
+      },
+      "Geo": {
+        "Latitude": 46.3793,
+        "Longitude": -82.6608,
+        "TimeZoneId": "America/Toronto",
+        "CurrentUtcOffset": 0
+      },
+      "ListingNumber": 1,
+      "OrderingUrl": "http://order.subway.com/Stores/Redirect.aspx?s=16854&sa=0&f=r&scc=CA&spc=ON",
+      "CateringUrl": "https://cateringca.subway.com/index.cfm?fuseaction=order&action=preorder&store_code=16854&distribution_type=2",
+      "ExtendedProperties": null
+    },
+    {
+      "LocationId": {
+        "StoreNumber": 20825,
+        "SatelliteNumber": 0
+      },
+      "Address": {
+        "Address1": "225 Causley St",
+        "Address2": "",
+        "Address3": "",
+        "City": "Blind River",
+        "StateProvCode": "ON",
+        "PostalCode": "P0R 1B0",
+        "CountryCode": "CA",
+        "CountryCode3": "CAN"
+      },
+      "Geo": {
+        "Latitude": 46.1816,
+        "Longitude": -82.9415,
+        "TimeZoneId": "America/Toronto",
+        "CurrentUtcOffset": 0
+      },
+      "ListingNumber": 2,
+      "OrderingUrl": "http://order.subway.com/Stores/Redirect.aspx?s=20825&sa=0&f=r&scc=CA&spc=ON",
+      "CateringUrl": "https://cateringca.subway.com/index.cfm?fuseaction=order&action=preorder&store_code=20825&distribution_type=2",
+      "ExtendedProperties": null
+    },
+    {
+      "LocationId": {
+        "StoreNumber": 15267,
+        "SatelliteNumber": 0
+      },
+      "Address": {
+        "Address1": "116 Centre St",
+        "Address2": "",
+        "Address3": "",
+        "City": "Espanola",
+        "StateProvCode": "ON",
+        "PostalCode": "P5E 1S4",
+        "CountryCode": "CA",
+        "CountryCode3": "CAN"
+      },
+      "Geo": {
+        "Latitude": 46.264,
+        "Longitude": -81.7636,
+        "TimeZoneId": "America/Toronto",
+        "CurrentUtcOffset": 0
+      },
+      "ListingNumber": 3,
+      "OrderingUrl": "http://order.subway.com/Stores/Redirect.aspx?s=15267&sa=0&f=r&scc=CA&spc=ON",
+      "CateringUrl": "https://cateringca.subway.com/index.cfm?fuseaction=order&action=preorder&store_code=15267&distribution_type=2",
+      "ExtendedProperties": null
+    },
+    {
+      "LocationId": {
+        "StoreNumber": 60962,
+        "SatelliteNumber": 0
+      },
+      "Address": {
+        "Address1": "6-168 Regional Rd 8",
+        "Address2": "",
+        "Address3": "",
+        "City": "Onaping",
+        "StateProvCode": "ON",
+        "PostalCode": "P0M2R0",
+        "CountryCode": "CA",
+        "CountryCode3": "CAN"
+      },
+      "Geo": {
+        "Latitude": 46.6286,
+        "Longitude": -81.4008,
+        "TimeZoneId": "America/Toronto",
+        "CurrentUtcOffset": 0
+      },
+      "ListingNumber": 4,
+      "OrderingUrl": "http://order.subway.com/Stores/Redirect.aspx?s=60962&sa=0&f=r&scc=CA&spc=ON",
+      "CateringUrl": "https://cateringca.subway.com/index.cfm?fuseaction=order&action=preorder&store_code=60962&distribution_type=2",
+      "ExtendedProperties": null
+    },
+    {
+      "LocationId": {
+        "StoreNumber": 14558,
+        "SatelliteNumber": 0
+      },
+      "Address": {
+        "Address1": "3183 Errington Avenue",
+        "Address2": "Unit 1",
+        "Address3": "Errington Mall",
+        "City": "Chelmsford",
+        "StateProvCode": "ON",
+        "PostalCode": "P0M 1L0",
+        "CountryCode": "CA",
+        "CountryCode3": "CAN"
+      },
+      "Geo": {
+        "Latitude": 46.5674,
+        "Longitude": -81.1979,
+        "TimeZoneId": "America/Toronto",
+        "CurrentUtcOffset": 0
+      },
+      "ListingNumber": 5,
+      "OrderingUrl": "http://order.subway.com/Stores/Redirect.aspx?s=14558&sa=0&f=r&scc=CA&spc=ON",
+      "CateringUrl": "https://cateringca.subway.com/index.cfm?fuseaction=order&action=preorder&store_code=14558&distribution_type=2",
+      "ExtendedProperties": null
+    },
+    {
+      "LocationId": {
+        "StoreNumber": 23520,
+        "SatelliteNumber": 0
+      },
+      "Address": {
+        "Address1": "140 Regional Rd 24",
+        "Address2": "",
+        "Address3": "",
+        "City": "Walden",
+        "StateProvCode": "ON",
+        "PostalCode": "P3Y 1J2",
+        "CountryCode": "CA",
+        "CountryCode3": "CAN"
+      },
+      "Geo": {
+        "Latitude": 46.4234,
+        "Longitude": -81.1414,
+        "TimeZoneId": "America/Toronto",
+        "CurrentUtcOffset": 0
+      },
+      "ListingNumber": 6,
+      "OrderingUrl": "http://order.subway.com/Stores/Redirect.aspx?s=23520&sa=0&f=r&scc=CA&spc=ON",
+      "CateringUrl": "https://cateringca.subway.com/index.cfm?fuseaction=order&action=preorder&store_code=23520&distribution_type=2",
+      "ExtendedProperties": null
+    },
+    {
+      "LocationId": {
+        "StoreNumber": 54384,
+        "SatelliteNumber": 0
+      },
+      "Address": {
+        "Address1": "93 Notre Dame Avenue West",
+        "Address2": "Unit 8",
+        "Address3": "Azilda Plaza",
+        "City": "Azilda",
+        "StateProvCode": "ON",
+        "PostalCode": "P0M1B0",
+        "CountryCode": "CA",
+        "CountryCode3": "CAN"
+      },
+      "Geo": {
+        "Latitude": 46.5527,
+        "Longitude": -81.1176,
+        "TimeZoneId": "America/Toronto",
+        "CurrentUtcOffset": 0
+      },
+      "ListingNumber": 7,
+      "OrderingUrl": "http://order.subway.com/Stores/Redirect.aspx?s=54384&sa=0&f=r&scc=CA&spc=ON",
+      "CateringUrl": "https://cateringca.subway.com/index.cfm?fuseaction=order&action=preorder&store_code=54384&distribution_type=2",
+      "ExtendedProperties": null
+    },
+    {
+      "LocationId": {
+        "StoreNumber": 14933,
+        "SatelliteNumber": 0
+      },
+      "Address": {
+        "Address1": "943 Lorne St",
+        "Address2": "",
+        "Address3": "",
+        "City": "Greater Sudbury",
+        "StateProvCode": "ON",
+        "PostalCode": "P3C 4R8",
+        "CountryCode": "CA",
+        "CountryCode3": "CAN"
+      },
+      "Geo": {
+        "Latitude": 46.476,
+        "Longitude": -81.0209,
+        "TimeZoneId": "America/Toronto",
+        "CurrentUtcOffset": 0
+      },
+      "ListingNumber": 8,
+      "OrderingUrl": "http://order.subway.com/Stores/Redirect.aspx?s=14933&sa=0&f=r&scc=CA&spc=ON",
+      "CateringUrl": "https://cateringca.subway.com/index.cfm?fuseaction=order&action=preorder&store_code=14933&distribution_type=2",
+      "ExtendedProperties": null
+    },
+    {
+      "LocationId": {
+        "StoreNumber": 15501,
+        "SatelliteNumber": 0
+      },
+      "Address": {
+        "Address1": "155 Churchill Blvd",
+        "Address2": "Unit 17",
+        "Address3": "Churchill Plaza",
+        "City": "Sault Ste Marie",
+        "StateProvCode": "ON",
+        "PostalCode": "P6A 3Z9",
+        "CountryCode": "CA",
+        "CountryCode3": "CAN"
+      },
+      "Geo": {
+        "Latitude": 46.511,
+        "Longitude": -84.296,
+        "TimeZoneId": "America/Detroit",
+        "CurrentUtcOffset": 0
+      },
+      "ListingNumber": 9,
+      "OrderingUrl": "http://order.subway.com/Stores/Redirect.aspx?s=15501&sa=0&f=r&scc=CA&spc=ON",
+      "CateringUrl": "https://cateringca.subway.com/index.cfm?fuseaction=order&action=preorder&store_code=15501&distribution_type=2",
+      "ExtendedProperties": null
+    },
+    {
+      "LocationId": {
+        "StoreNumber": 56481,
+        "SatelliteNumber": 0
+      },
+      "Address": {
+        "Address1": "568 Kathleen St.",
+        "Address2": "",
+        "Address3": "",
+        "City": "Sudbury",
+        "StateProvCode": "ON",
+        "PostalCode": "P3C 2N3",
+        "CountryCode": "CA",
+        "CountryCode3": "CAN"
+      },
+      "Geo": {
+        "Latitude": 46.5004,
+        "Longitude": -81.005,
+        "TimeZoneId": "America/Toronto",
+        "CurrentUtcOffset": 0
+      },
+      "ListingNumber": 10,
+      "OrderingUrl": "http://order.subway.com/Stores/Redirect.aspx?s=56481&sa=0&f=r&scc=CA&spc=ON",
+      "CateringUrl": "https://cateringca.subway.com/index.cfm?fuseaction=order&action=preorder&store_code=56481&distribution_type=2",
+      "ExtendedProperties": null
+    },
+    {
+      "LocationId": {
+        "StoreNumber": 65756,
+        "SatelliteNumber": 0
+      },
+      "Address": {
+        "Address1": "443 Northern Avenue",
+        "Address2": "Food Court",
+        "Address3": "Sault College",
+        "City": "Sault Ste. Marie",
+        "StateProvCode": "ON",
+        "PostalCode": "P6A 5L3",
+        "CountryCode": "CA",
+        "CountryCode3": "CAN"
+      },
+      "Geo": {
+        "Latitude": 46.5337,
+        "Longitude": -84.309,
+        "TimeZoneId": "America/Detroit",
+        "CurrentUtcOffset": 0
+      },
+      "ListingNumber": 11,
+      "OrderingUrl": "http://order.subway.com/Stores/Redirect.aspx?s=65756&sa=0&f=r&scc=CA&spc=ON",
+      "CateringUrl": null,
+      "ExtendedProperties": null
+    },
+    {
+      "LocationId": {
+        "StoreNumber": 13407,
+        "SatelliteNumber": 0
+      },
+      "Address": {
+        "Address1": "3140  HWY 69 N",
+        "Address2": "Unit 26",
+        "Address3": "Place Val Est Mall",
+        "City": "Val Caron",
+        "StateProvCode": "ON",
+        "PostalCode": "P3N 1G3",
+        "CountryCode": "CA",
+        "CountryCode3": "CAN"
+      },
+      "Geo": {
+        "Latitude": 46.6125,
+        "Longitude": -81.0075,
+        "TimeZoneId": "America/Toronto",
+        "CurrentUtcOffset": 0
+      },
+      "ListingNumber": 12,
+      "OrderingUrl": "http://order.subway.com/Stores/Redirect.aspx?s=13407&sa=0&f=r&scc=CA&spc=ON",
+      "CateringUrl": "https://cateringca.subway.com/index.cfm?fuseaction=order&action=preorder&store_code=13407&distribution_type=2",
+      "ExtendedProperties": null
+    },
+    {
+      "LocationId": {
+        "StoreNumber": 13903,
+        "SatelliteNumber": 0
+      },
+      "Address": {
+        "Address1": "1895 Regent St S",
+        "Address2": "",
+        "Address3": "",
+        "City": "Sudbury",
+        "StateProvCode": "ON",
+        "PostalCode": "P3E 3Z7",
+        "CountryCode": "CA",
+        "CountryCode3": "CAN"
+      },
+      "Geo": {
+        "Latitude": 46.4518,
+        "Longitude": -81.0037,
+        "TimeZoneId": "America/Toronto",
+        "CurrentUtcOffset": 0
+      },
+      "ListingNumber": 13,
+      "OrderingUrl": "http://order.subway.com/Stores/Redirect.aspx?s=13903&sa=0&f=r&scc=CA&spc=ON",
+      "CateringUrl": "https://cateringca.subway.com/index.cfm?fuseaction=order&action=preorder&store_code=13903&distribution_type=2",
+      "ExtendedProperties": null
+    },
+    {
+      "LocationId": {
+        "StoreNumber": 48614,
+        "SatelliteNumber": 0
+      },
+      "Address": {
+        "Address1": "2408 Long Lake Dr",
+        "Address2": "Unit E4",
+        "Address3": "The Complex",
+        "City": "Sudbury",
+        "StateProvCode": "ON",
+        "PostalCode": "P3E 5H5",
+        "CountryCode": "CA",
+        "CountryCode3": "CAN"
+      },
+      "Geo": {
+        "Latitude": 46.44,
+        "Longitude": -81.0045,
+        "TimeZoneId": "America/Toronto",
+        "CurrentUtcOffset": 0
+      },
+      "ListingNumber": 14,
+      "OrderingUrl": "http://order.subway.com/Stores/Redirect.aspx?s=48614&sa=0&f=r&scc=CA&spc=ON",
+      "CateringUrl": "https://cateringca.subway.com/index.cfm?fuseaction=order&action=preorder&store_code=48614&distribution_type=2",
+      "ExtendedProperties": null
+    },
+    {
+      "LocationId": {
+        "StoreNumber": 67493,
+        "SatelliteNumber": 0
+      },
+      "Address": {
+        "Address1": "935 Ramsey Lake Road",
+        "Address2": "The Arts Building",
+        "Address3": "Laurentian University",
+        "City": "Sudbury",
+        "StateProvCode": "ON",
+        "PostalCode": "P3E 2C3",
+        "CountryCode": "CA",
+        "CountryCode3": "CAN"
+      },
+      "Geo": {
+        "Latitude": 46.4698,
+        "Longitude": -80.9971,
+        "TimeZoneId": "America/Toronto",
+        "CurrentUtcOffset": 0
+      },
+      "ListingNumber": 15,
+      "OrderingUrl": "http://order.subway.com/Stores/Redirect.aspx?s=67493&sa=0&f=r&scc=CA&spc=ON",
+      "CateringUrl": null,
+      "ExtendedProperties": null
+    },
+    {
+      "LocationId": {
+        "StoreNumber": 14891,
+        "SatelliteNumber": 0
+      },
+      "Address": {
+        "Address1": "43 Durham St",
+        "Address2": "",
+        "Address3": "",
+        "City": "Sudbury",
+        "StateProvCode": "ON",
+        "PostalCode": "P3E 3M2",
+        "CountryCode": "CA",
+        "CountryCode3": "CAN"
+      },
+      "Geo": {
+        "Latitude": 46.492,
+        "Longitude": -80.9952,
+        "TimeZoneId": "America/Toronto",
+        "CurrentUtcOffset": 0
+      },
+      "ListingNumber": 16,
+      "OrderingUrl": "http://order.subway.com/Stores/Redirect.aspx?s=14891&sa=0&f=r&scc=CA&spc=ON",
+      "CateringUrl": "https://cateringca.subway.com/index.cfm?fuseaction=order&action=preorder&store_code=14891&distribution_type=2",
+      "ExtendedProperties": null
+    },
+    {
+      "LocationId": {
+        "StoreNumber": 20968,
+        "SatelliteNumber": 0
+      },
+      "Address": {
+        "Address1": "625 Trunk Road",
+        "Address2": "",
+        "Address3": "",
+        "City": "Sault Ste Marie",
+        "StateProvCode": "ON",
+        "PostalCode": "P6A 3T1",
+        "CountryCode": "CA",
+        "CountryCode3": "CAN"
+      },
+      "Geo": {
+        "Latitude": 46.5249,
+        "Longitude": -84.3192,
+        "TimeZoneId": "America/Detroit",
+        "CurrentUtcOffset": 0
+      },
+      "ListingNumber": 17,
+      "OrderingUrl": "http://order.subway.com/Stores/Redirect.aspx?s=20968&sa=0&f=r&scc=CA&spc=ON",
+      "CateringUrl": "https://cateringca.subway.com/index.cfm?fuseaction=order&action=preorder&store_code=20968&distribution_type=2",
+      "ExtendedProperties": null
+    },
+    {
+      "LocationId": {
+        "StoreNumber": 10176,
+        "SatelliteNumber": 0
+      },
+      "Address": {
+        "Address1": "153 Great Northern Rd",
+        "Address2": "",
+        "Address3": "",
+        "City": "Sault Ste Marie",
+        "StateProvCode": "ON",
+        "PostalCode": "P6A 6N1",
+        "CountryCode": "CA",
+        "CountryCode3": "CAN"
+      },
+      "Geo": {
+        "Latitude": 46.5307,
+        "Longitude": -84.32,
+        "TimeZoneId": "America/Detroit",
+        "CurrentUtcOffset": 0
+      },
+      "ListingNumber": 18,
+      "OrderingUrl": "http://order.subway.com/Stores/Redirect.aspx?s=10176&sa=0&f=r&scc=CA&spc=ON",
+      "CateringUrl": "https://cateringca.subway.com/index.cfm?fuseaction=order&action=preorder&store_code=10176&distribution_type=2",
+      "ExtendedProperties": null
+    },
+    {
+      "LocationId": {
+        "StoreNumber": 53088,
+        "SatelliteNumber": 0
+      },
+      "Address": {
+        "Address1": "25 Drive In Road",
+        "Address2": "",
+        "Address3": "",
+        "City": "Sault Ste Marie",
+        "StateProvCode": "ON",
+        "PostalCode": "P6B 5T1",
+        "CountryCode": "CA",
+        "CountryCode3": "CAN"
+      },
+      "Geo": {
+        "Latitude": 46.5477,
+        "Longitude": -84.3201,
+        "TimeZoneId": "America/Toronto",
+        "CurrentUtcOffset": 0
+      },
+      "ListingNumber": 19,
+      "OrderingUrl": "http://order.subway.com/Stores/Redirect.aspx?s=53088&sa=0&f=r&scc=CA&spc=ON",
+      "CateringUrl": "https://cateringca.subway.com/index.cfm?fuseaction=order&action=preorder&store_code=53088&distribution_type=2",
+      "ExtendedProperties": null
+    },
+    {
+      "LocationId": {
+        "StoreNumber": 6024,
+        "SatelliteNumber": 0
+      },
+      "Address": {
+        "Address1": "233 Brady Street",
+        "Address2": "",
+        "Address3": "Brady Square",
+        "City": "Sudbury",
+        "StateProvCode": "ON",
+        "PostalCode": "P3B 4H5",
+        "CountryCode": "CA",
+        "CountryCode3": "CAN"
+      },
+      "Geo": {
+        "Latitude": 46.4896,
+        "Longitude": -80.9893,
+        "TimeZoneId": "America/Toronto",
+        "CurrentUtcOffset": 0
+      },
+      "ListingNumber": 20,
+      "OrderingUrl": "http://order.subway.com/Stores/Redirect.aspx?s=6024&sa=0&f=r&scc=CA&spc=ON",
+      "CateringUrl": "https://cateringca.subway.com/index.cfm?fuseaction=order&action=preorder&store_code=6024&distribution_type=2",
+      "ExtendedProperties": null
+    },
+    {
+      "LocationId": {
+        "StoreNumber": 24691,
+        "SatelliteNumber": 0
+      },
+      "Address": {
+        "Address1": "1133 Notre Dame",
+        "Address2": "",
+        "Address3": "",
+        "City": "Sudbury",
+        "StateProvCode": "ON",
+        "PostalCode": "P3A 2T7",
+        "CountryCode": "CA",
+        "CountryCode3": "CAN"
+      },
+      "Geo": {
+        "Latitude": 46.5221,
+        "Longitude": -80.9837,
+        "TimeZoneId": "America/Toronto",
+        "CurrentUtcOffset": 0
+      },
+      "ListingNumber": 21,
+      "OrderingUrl": "http://order.subway.com/Stores/Redirect.aspx?s=24691&sa=0&f=r&scc=CA&spc=ON",
+      "CateringUrl": "https://cateringca.subway.com/index.cfm?fuseaction=order&action=preorder&store_code=24691&distribution_type=2",
+      "ExtendedProperties": null
+    },
+    {
+      "LocationId": {
+        "StoreNumber": 40138,
+        "SatelliteNumber": 0
+      },
+      "Address": {
+        "Address1": "4558 Elmview Drive",
+        "Address2": "",
+        "Address3": "",
+        "City": "Hanmer",
+        "StateProvCode": "ON",
+        "PostalCode": "P3P 1P6",
+        "CountryCode": "CA",
+        "CountryCode3": "CAN"
+      },
+      "Geo": {
+        "Latitude": 46.6518,
+        "Longitude": -80.9877,
+        "TimeZoneId": "America/Toronto",
+        "CurrentUtcOffset": 0
+      },
+      "ListingNumber": 22,
+      "OrderingUrl": "http://order.subway.com/Stores/Redirect.aspx?s=40138&sa=0&f=r&scc=CA&spc=ON",
+      "CateringUrl": "https://cateringca.subway.com/index.cfm?fuseaction=order&action=preorder&store_code=40138&distribution_type=2",
+      "ExtendedProperties": null
+    },
+    {
+      "LocationId": {
+        "StoreNumber": 13335,
+        "SatelliteNumber": 0
+      },
+      "Address": {
+        "Address1": "421 Bay Street",
+        "Address2": "Suite 101",
+        "Address3": "Station Tower",
+        "City": "Sault Ste Marie",
+        "StateProvCode": "ON",
+        "PostalCode": "P6A 5M2",
+        "CountryCode": "CA",
+        "CountryCode3": "CAN"
+      },
+      "Geo": {
+        "Latitude": 46.5112,
+        "Longitude": -84.3349,
+        "TimeZoneId": "America/Detroit",
+        "CurrentUtcOffset": 0
+      },
+      "ListingNumber": 23,
+      "OrderingUrl": "http://order.subway.com/Stores/Redirect.aspx?s=13335&sa=0&f=r&scc=CA&spc=ON",
+      "CateringUrl": "https://cateringca.subway.com/index.cfm?fuseaction=order&action=preorder&store_code=13335&distribution_type=2",
+      "ExtendedProperties": null
+    },
+    {
+      "LocationId": {
+        "StoreNumber": 34078,
+        "SatelliteNumber": 0
+      },
+      "Address": {
+        "Address1": "293 Bay St",
+        "Address2": "Unit ER 2",
+        "Address3": "Station Mall",
+        "City": "Sault Ste Marie",
+        "StateProvCode": "ON",
+        "PostalCode": "P6A 1X3",
+        "CountryCode": "CA",
+        "CountryCode3": "CAN"
+      },
+      "Geo": {
+        "Latitude": 46.5122,
+        "Longitude": -84.3388,
+        "TimeZoneId": "America/Detroit",
+        "CurrentUtcOffset": 0
+      },
+      "ListingNumber": 24,
+      "OrderingUrl": "http://order.subway.com/Stores/Redirect.aspx?s=34078&sa=0&f=r&scc=CA&spc=ON",
+      "CateringUrl": "https://cateringca.subway.com/index.cfm?fuseaction=order&action=preorder&store_code=34078&distribution_type=2",
+      "ExtendedProperties": null
+    },
+    {
+      "LocationId": {
+        "StoreNumber": 12273,
+        "SatelliteNumber": 0
+      },
+      "Address": {
+        "Address1": "900 Lasalle Blvd",
+        "Address2": "Unit B",
+        "Address3": "",
+        "City": "Sudbury",
+        "StateProvCode": "ON",
+        "PostalCode": "P3A 5W8",
+        "CountryCode": "CA",
+        "CountryCode3": "CAN"
+      },
+      "Geo": {
+        "Latitude": 46.5233,
+        "Longitude": -80.9611,
+        "TimeZoneId": "America/Toronto",
+        "CurrentUtcOffset": 0
+      },
+      "ListingNumber": 25,
+      "OrderingUrl": "http://order.subway.com/Stores/Redirect.aspx?s=12273&sa=0&f=r&scc=CA&spc=ON",
+      "CateringUrl": "https://cateringca.subway.com/index.cfm?fuseaction=order&action=preorder&store_code=12273&distribution_type=2",
+      "ExtendedProperties": null
+    },
+    {
+      "LocationId": {
+        "StoreNumber": 3045,
+        "SatelliteNumber": 0
+      },
+      "Address": {
+        "Address1": "2309 Ashmun St",
+        "Address2": "",
+        "Address3": "",
+        "City": "Sault Ste Marie",
+        "StateProvCode": "MI",
+        "PostalCode": "49783",
+        "CountryCode": "US",
+        "CountryCode3": "USA"
+      },
+      "Geo": {
+        "Latitude": 46.4784,
+        "Longitude": -84.3537,
+        "TimeZoneId": "America/Detroit",
+        "CurrentUtcOffset": 0
+      },
+      "ListingNumber": 26,
+      "OrderingUrl": "http://order.subway.com/Stores/Redirect.aspx?s=3045&sa=0&f=r&scc=US&spc=MI",
+      "CateringUrl": "https://www.ezcater.com/catering/pvt/subway-sault-ste-marie",
+      "ExtendedProperties": null
+    },
+    {
+      "LocationId": {
+        "StoreNumber": 22837,
+        "SatelliteNumber": 0
+      },
+      "Address": {
+        "Address1": "216 2nd Line W",
+        "Address2": "",
+        "Address3": "",
+        "City": "Sault Ste Marie",
+        "StateProvCode": "ON",
+        "PostalCode": "P6C 2J3",
+        "CountryCode": "CA",
+        "CountryCode3": "CAN"
+      },
+      "Geo": {
+        "Latitude": 46.5374,
+        "Longitude": -84.3609,
+        "TimeZoneId": "America/Detroit",
+        "CurrentUtcOffset": 0
+      },
+      "ListingNumber": 27,
+      "OrderingUrl": "http://order.subway.com/Stores/Redirect.aspx?s=22837&sa=0&f=r&scc=CA&spc=ON",
+      "CateringUrl": "https://cateringca.subway.com/index.cfm?fuseaction=order&action=preorder&store_code=22837&distribution_type=2",
+      "ExtendedProperties": null
+    },
+    {
+      "LocationId": {
+        "StoreNumber": 7756,
+        "SatelliteNumber": 0
+      },
+      "Address": {
+        "Address1": "1349 Lasalle Blvd",
+        "Address2": "Unit 104A",
+        "Address3": "New Sudbury Centre",
+        "City": "Sudbury",
+        "StateProvCode": "ON",
+        "PostalCode": "P3A 1Z2",
+        "CountryCode": "CA",
+        "CountryCode3": "CAN"
+      },
+      "Geo": {
+        "Latitude": 46.5221,
+        "Longitude": -80.9457,
+        "TimeZoneId": "America/Toronto",
+        "CurrentUtcOffset": 0
+      },
+      "ListingNumber": 28,
+      "OrderingUrl": "http://order.subway.com/Stores/Redirect.aspx?s=7756&sa=0&f=r&scc=CA&spc=ON",
+      "CateringUrl": "https://cateringca.subway.com/index.cfm?fuseaction=order&action=preorder&store_code=7756&distribution_type=2",
+      "ExtendedProperties": null
+    },
+    {
+      "LocationId": {
+        "StoreNumber": 23113,
+        "SatelliteNumber": 0
+      },
+      "Address": {
+        "Address1": "1400 The Kingsway",
+        "Address2": "Unit 3",
+        "Address3": "",
+        "City": "Sudbury",
+        "StateProvCode": "ON",
+        "PostalCode": "P3B 0A3",
+        "CountryCode": "CA",
+        "CountryCode3": "CAN"
+      },
+      "Geo": {
+        "Latitude": 46.5058,
+        "Longitude": -80.9452,
+        "TimeZoneId": "America/Toronto",
+        "CurrentUtcOffset": 0
+      },
+      "ListingNumber": 29,
+      "OrderingUrl": "http://order.subway.com/Stores/Redirect.aspx?s=23113&sa=0&f=r&scc=CA&spc=ON",
+      "CateringUrl": "https://cateringca.subway.com/index.cfm?fuseaction=order&action=preorder&store_code=23113&distribution_type=2",
+      "ExtendedProperties": null
+    },
+    {
+      "LocationId": {
+        "StoreNumber": 38064,
+        "SatelliteNumber": 0
+      },
+      "Address": {
+        "Address1": "3763 I-75 Business Spur",
+        "Address2": "",
+        "Address3": "Wal-Mart #1936",
+        "City": "Sault St. Marie",
+        "StateProvCode": "MI",
+        "PostalCode": "49783",
+        "CountryCode": "US",
+        "CountryCode3": "USA"
+      },
+      "Geo": {
+        "Latitude": 46.4649,
+        "Longitude": -84.3661,
+        "TimeZoneId": "America/Detroit",
+        "CurrentUtcOffset": 0
+      },
+      "ListingNumber": 30,
+      "OrderingUrl": "http://order.subway.com/Stores/Redirect.aspx?s=38064&sa=0&f=r&scc=US&spc=MI",
+      "CateringUrl": "https://www.ezcater.com/catering/pvt/subway-sault-st-marie",
+      "ExtendedProperties": null
+    },
+    {
+      "LocationId": {
+        "StoreNumber": 47611,
+        "SatelliteNumber": 0
+      },
+      "Address": {
+        "Address1": "1199 Marcus Drive",
+        "Address2": "",
+        "Address3": "Lowes",
+        "City": "Sudbury",
+        "StateProvCode": "ON",
+        "PostalCode": "P3A7R7",
+        "CountryCode": "CA",
+        "CountryCode3": "CAN"
+      },
+      "Geo": {
+        "Latitude": 46.5031,
+        "Longitude": -80.9421,
+        "TimeZoneId": "America/Toronto",
+        "CurrentUtcOffset": 0
+      },
+      "ListingNumber": 31,
+      "OrderingUrl": "http://order.subway.com/Stores/Redirect.aspx?s=47611&sa=0&f=r&scc=CA&spc=ON",
+      "CateringUrl": "https://cateringca.subway.com/index.cfm?fuseaction=order&action=preorder&store_code=47611&distribution_type=2",
+      "ExtendedProperties": null
+    },
+    {
+      "LocationId": {
+        "StoreNumber": 53306,
+        "SatelliteNumber": 0
+      },
+      "Address": {
+        "Address1": "2156 LaSalle Boulevard",
+        "Address2": "",
+        "Address3": "",
+        "City": "Sudbury",
+        "StateProvCode": "ON",
+        "PostalCode": "P3A 2A7",
+        "CountryCode": "CA",
+        "CountryCode3": "CAN"
+      },
+      "Geo": {
+        "Latitude": 46.5221,
+        "Longitude": -80.92,
+        "TimeZoneId": "America/Toronto",
+        "CurrentUtcOffset": 0
+      },
+      "ListingNumber": 32,
+      "OrderingUrl": "http://order.subway.com/Stores/Redirect.aspx?s=53306&sa=0&f=r&scc=CA&spc=ON",
+      "CateringUrl": "https://cateringca.subway.com/index.cfm?fuseaction=order&action=preorder&store_code=53306&distribution_type=2",
+      "ExtendedProperties": null
+    },
+    {
+      "LocationId": {
+        "StoreNumber": 59850,
+        "SatelliteNumber": 0
+      },
+      "Address": {
+        "Address1": "29 Regional Rd 84",
+        "Address2": "Unit# 3",
+        "Address3": "",
+        "City": "Capreol",
+        "StateProvCode": "ON",
+        "PostalCode": "P0M1H0",
+        "CountryCode": "CA",
+        "CountryCode3": "CAN"
+      },
+      "Geo": {
+        "Latitude": 46.7127,
+        "Longitude": -80.923,
+        "TimeZoneId": "America/Toronto",
+        "CurrentUtcOffset": 0
+      },
+      "ListingNumber": 33,
+      "OrderingUrl": "http://order.subway.com/Stores/Redirect.aspx?s=59850&sa=0&f=r&scc=CA&spc=ON",
+      "CateringUrl": null,
+      "ExtendedProperties": null
+    },
+    {
+      "LocationId": {
+        "StoreNumber": 20543,
+        "SatelliteNumber": 0
+      },
+      "Address": {
+        "Address1": "3397 Falconbridge Hwy",
+        "Address2": "",
+        "Address3": "Esso Gas/Jiffy Mart C-Store",
+        "City": "Garson",
+        "StateProvCode": "ON",
+        "PostalCode": "P3L 1E4",
+        "CountryCode": "CA",
+        "CountryCode3": "CAN"
+      },
+      "Geo": {
+        "Latitude": 46.5529,
+        "Longitude": -80.8663,
+        "TimeZoneId": "America/Toronto",
+        "CurrentUtcOffset": 0
+      },
+      "ListingNumber": 34,
+      "OrderingUrl": "http://order.subway.com/Stores/Redirect.aspx?s=20543&sa=0&f=r&scc=CA&spc=ON",
+      "CateringUrl": "https://cateringca.subway.com/index.cfm?fuseaction=order&action=preorder&store_code=20543&distribution_type=2",
+      "ExtendedProperties": null
+    },
+    {
+      "LocationId": {
+        "StoreNumber": 41788,
+        "SatelliteNumber": 0
+      },
+      "Address": {
+        "Address1": "161 Highway #17 East",
+        "Address2": "",
+        "Address3": "",
+        "City": "Wahnapitae",
+        "StateProvCode": "ON",
+        "PostalCode": "P0M 3C0",
+        "CountryCode": "CA",
+        "CountryCode3": "CAN"
+      },
+      "Geo": {
+        "Latitude": 46.4877,
+        "Longitude": -80.7899,
+        "TimeZoneId": "America/Toronto",
+        "CurrentUtcOffset": 0
+      },
+      "ListingNumber": 35,
+      "OrderingUrl": "http://order.subway.com/Stores/Redirect.aspx?s=41788&sa=0&f=r&scc=CA&spc=ON",
+      "CateringUrl": "https://cateringca.subway.com/index.cfm?fuseaction=order&action=preorder&store_code=41788&distribution_type=2",
+      "ExtendedProperties": null
+    },
+    {
+      "LocationId": {
+        "StoreNumber": 14169,
+        "SatelliteNumber": 0
+      },
+      "Address": {
+        "Address1": "285 Bradley Hwy",
+        "Address2": "",
+        "Address3": "Bayport Convenience Center",
+        "City": "Rogers City",
+        "StateProvCode": "MI",
+        "PostalCode": "49779-2137",
+        "CountryCode": "US",
+        "CountryCode3": "USA"
+      },
+      "Geo": {
+        "Latitude": 45.4096,
+        "Longitude": -83.8254,
+        "TimeZoneId": "America/Detroit",
+        "CurrentUtcOffset": 0
+      },
+      "ListingNumber": 36,
+      "OrderingUrl": "http://order.subway.com/Stores/Redirect.aspx?s=14169&sa=0&f=r&scc=US&spc=MI",
+      "CateringUrl": "https://www.ezcater.com/catering/pvt/subway-rogers-city",
+      "ExtendedProperties": null
+    },
+    {
+      "LocationId": {
+        "StoreNumber": 53871,
+        "SatelliteNumber": 0
+      },
+      "Address": {
+        "Address1": "29 Lorne Street",
+        "Address2": "",
+        "Address3": "",
+        "City": "Chapleau",
+        "StateProvCode": "ON",
+        "PostalCode": "P0M 1K0",
+        "CountryCode": "CA",
+        "CountryCode3": "CAN"
+      },
+      "Geo": {
+        "Latitude": 47.8414,
+        "Longitude": -83.4,
+        "TimeZoneId": "America/Toronto",
+        "CurrentUtcOffset": 0
+      },
+      "ListingNumber": 37,
+      "OrderingUrl": "http://order.subway.com/Stores/Redirect.aspx?s=53871&sa=0&f=r&scc=CA&spc=ON",
+      "CateringUrl": "https://cateringca.subway.com/index.cfm?fuseaction=order&action=preorder&store_code=53871&distribution_type=2",
+      "ExtendedProperties": null
+    },
+    {
+      "LocationId": {
+        "StoreNumber": 6925,
+        "SatelliteNumber": 0
+      },
+      "Address": {
+        "Address1": "428 N Main St",
+        "Address2": "",
+        "Address3": "",
+        "City": "Cheboygan",
+        "StateProvCode": "MI",
+        "PostalCode": "49721",
+        "CountryCode": "US",
+        "CountryCode3": "USA"
+      },
+      "Geo": {
+        "Latitude": 45.6465,
+        "Longitude": -84.4748,
+        "TimeZoneId": "America/Detroit",
+        "CurrentUtcOffset": 0
+      },
+      "ListingNumber": 38,
+      "OrderingUrl": "http://order.subway.com/Stores/Redirect.aspx?s=6925&sa=0&f=r&scc=US&spc=MI",
+      "CateringUrl": "https://www.ezcater.com/catering/pvt/subway-cheboygan-n-main-st",
+      "ExtendedProperties": null
+    },
+    {
+      "LocationId": {
+        "StoreNumber": 37335,
+        "SatelliteNumber": 0
+      },
+      "Address": {
+        "Address1": "1150 S Main",
+        "Address2": "",
+        "Address3": "Wal-Mart  #2100",
+        "City": "Cheboygan",
+        "StateProvCode": "MI",
+        "PostalCode": "49721",
+        "CountryCode": "US",
+        "CountryCode3": "USA"
+      },
+      "Geo": {
+        "Latitude": 45.6261,
+        "Longitude": -84.4818,
+        "TimeZoneId": "America/Detroit",
+        "CurrentUtcOffset": 0
+      },
+      "ListingNumber": 39,
+      "OrderingUrl": "http://order.subway.com/Stores/Redirect.aspx?s=37335&sa=0&f=r&scc=US&spc=MI",
+      "CateringUrl": "https://www.ezcater.com/catering/pvt/subway-cheboygan-s-main-st",
+      "ExtendedProperties": null
+    },
+    {
+      "LocationId": {
+        "StoreNumber": 25593,
+        "SatelliteNumber": 0
+      },
+      "Address": {
+        "Address1": "1049 N Bagley St",
+        "Address2": "Suite 7 and 8",
+        "Address3": "",
+        "City": "Alpena",
+        "StateProvCode": "MI",
+        "PostalCode": "49707",
+        "CountryCode": "US",
+        "CountryCode3": "USA"
+      },
+      "Geo": {
+        "Latitude": 45.0627,
+        "Longitude": -83.4712,
+        "TimeZoneId": "America/Detroit",
+        "CurrentUtcOffset": 0
+      },
+      "ListingNumber": 40,
+      "OrderingUrl": "http://order.subway.com/Stores/Redirect.aspx?s=25593&sa=0&f=r&scc=US&spc=MI",
+      "CateringUrl": "https://www.ezcater.com/catering/pvt/subway-alpena-n-bagley-st",
+      "ExtendedProperties": null
+    },
+    {
+      "LocationId": {
+        "StoreNumber": 36860,
+        "SatelliteNumber": 0
+      },
+      "Address": {
+        "Address1": "1180 M-32 West",
+        "Address2": "",
+        "Address3": "Wal-Mart #2358",
+        "City": "Alpena",
+        "StateProvCode": "MI",
+        "PostalCode": "49707",
+        "CountryCode": "US",
+        "CountryCode3": "USA"
+      },
+      "Geo": {
+        "Latitude": 45.0635,
+        "Longitude": -83.4775,
+        "TimeZoneId": "America/Detroit",
+        "CurrentUtcOffset": 0
+      },
+      "ListingNumber": 41,
+      "OrderingUrl": "http://order.subway.com/Stores/Redirect.aspx?s=36860&sa=0&f=r&scc=US&spc=MI",
+      "CateringUrl": "https://www.ezcater.com/catering/pvt/subway-alpena-m",
+      "ExtendedProperties": null
+    },
+    {
+      "LocationId": {
+        "StoreNumber": 23005,
+        "SatelliteNumber": 0
+      },
+      "Address": {
+        "Address1": "134 W US 2",
+        "Address2": "",
+        "Address3": "",
+        "City": "St Ignace",
+        "StateProvCode": "MI",
+        "PostalCode": "49781",
+        "CountryCode": "US",
+        "CountryCode3": "USA"
+      },
+      "Geo": {
+        "Latitude": 45.8573,
+        "Longitude": -84.7337,
+        "TimeZoneId": "America/Detroit",
+        "CurrentUtcOffset": 0
+      },
+      "ListingNumber": 42,
+      "OrderingUrl": "http://order.subway.com/Stores/Redirect.aspx?s=23005&sa=0&f=r&scc=US&spc=MI",
+      "CateringUrl": "https://www.ezcater.com/catering/pvt/subway-st-ignace",
+      "ExtendedProperties": null
+    },
+    {
+      "LocationId": {
+        "StoreNumber": 18163,
+        "SatelliteNumber": 0
+      },
+      "Address": {
+        "Address1": "27400 M 32",
+        "Address2": "",
+        "Address3": "BP Station",
+        "City": "Hillman",
+        "StateProvCode": "MI",
+        "PostalCode": "49746",
+        "CountryCode": "US",
+        "CountryCode3": "USA"
+      },
+      "Geo": {
+        "Latitude": 45.0576,
+        "Longitude": -83.8928,
+        "TimeZoneId": "America/Detroit",
+        "CurrentUtcOffset": 0
+      },
+      "ListingNumber": 43,
+      "OrderingUrl": "http://order.subway.com/Stores/Redirect.aspx?s=18163&sa=0&f=r&scc=US&spc=MI",
+      "CateringUrl": "https://www.ezcater.com/catering/pvt/subway-hillman",
+      "ExtendedProperties": null
+    },
+    {
+      "LocationId": {
+        "StoreNumber": 21415,
+        "SatelliteNumber": 0
+      },
+      "Address": {
+        "Address1": "4271 S Straits Hwy",
+        "Address2": "",
+        "Address3": "",
+        "City": "Indian River",
+        "StateProvCode": "MI",
+        "PostalCode": "49749",
+        "CountryCode": "US",
+        "CountryCode3": "USA"
+      },
+      "Geo": {
+        "Latitude": 45.4014,
+        "Longitude": -84.6185,
+        "TimeZoneId": "America/Detroit",
+        "CurrentUtcOffset": 0
+      },
+      "ListingNumber": 44,
+      "OrderingUrl": "http://order.subway.com/Stores/Redirect.aspx?s=21415&sa=0&f=r&scc=US&spc=MI",
+      "CateringUrl": "https://www.ezcater.com/catering/pvt/subway-indian-river-s-straits-hwy",
+      "ExtendedProperties": null
+    },
+    {
+      "LocationId": {
+        "StoreNumber": 42155,
+        "SatelliteNumber": 0
+      },
+      "Address": {
+        "Address1": "7722 US Hwy 31",
+        "Address2": "",
+        "Address3": "",
+        "City": "Alanson",
+        "StateProvCode": "MI",
+        "PostalCode": "49706",
+        "CountryCode": "US",
+        "CountryCode3": "USA"
+      },
+      "Geo": {
+        "Latitude": 45.439,
+        "Longitude": -84.7914,
+        "TimeZoneId": "America/Detroit",
+        "CurrentUtcOffset": 0
+      },
+      "ListingNumber": 45,
+      "OrderingUrl": "http://order.subway.com/Stores/Redirect.aspx?s=42155&sa=0&f=r&scc=US&spc=MI",
+      "CateringUrl": "https://www.ezcater.com/catering/pvt/subway-alanson",
+      "ExtendedProperties": null
+    },
+    {
+      "LocationId": {
+        "StoreNumber": 70156,
+        "SatelliteNumber": 0
+      },
+      "Address": {
+        "Address1": "210 Front St.",
+        "Address2": "Unit B",
+        "Address3": "",
+        "City": "Sturgeon Falls",
+        "StateProvCode": "ON",
+        "PostalCode": "P2B 0A9",
+        "CountryCode": "CA",
+        "CountryCode3": "CAN"
+      },
+      "Geo": {
+        "Latitude": 46.3658,
+        "Longitude": -79.9152,
+        "TimeZoneId": "America/Toronto",
+        "CurrentUtcOffset": 0
+      },
+      "ListingNumber": 46,
+      "OrderingUrl": "http://order.subway.com/Stores/Redirect.aspx?s=70156&sa=0&f=r&scc=CA&spc=ON",
+      "CateringUrl": "https://cateringca.subway.com/index.cfm?fuseaction=order&action=preorder&store_code=70156&distribution_type=2",
+      "ExtendedProperties": null
+    },
+    {
+      "LocationId": {
+        "StoreNumber": 10531,
+        "SatelliteNumber": 0
+      },
+      "Address": {
+        "Address1": "1127 US 31 N",
+        "Address2": "",
+        "Address3": "Glens Plaza Shopping Center",
+        "City": "Petoskey",
+        "StateProvCode": "MI",
+        "PostalCode": "49770-9305",
+        "CountryCode": "US",
+        "CountryCode3": "USA"
+      },
+      "Geo": {
+        "Latitude": 45.3902,
+        "Longitude": -84.9191,
+        "TimeZoneId": "America/Detroit",
+        "CurrentUtcOffset": 0
+      },
+      "ListingNumber": 47,
+      "OrderingUrl": "http://order.subway.com/Stores/Redirect.aspx?s=10531&sa=0&f=r&scc=US&spc=MI",
+      "CateringUrl": "https://www.ezcater.com/catering/pvt/subway-petoskey",
+      "ExtendedProperties": null
+    },
+    {
+      "LocationId": {
+        "StoreNumber": 565,
+        "SatelliteNumber": 0
+      },
+      "Address": {
+        "Address1": "610 W Mitchell St",
+        "Address2": "",
+        "Address3": "",
+        "City": "Petoskey",
+        "StateProvCode": "MI",
+        "PostalCode": "49770-8720",
+        "CountryCode": "US",
+        "CountryCode3": "USA"
+      },
+      "Geo": {
+        "Latitude": 45.3712,
+        "Longitude": -84.9713,
+        "TimeZoneId": "America/Detroit",
+        "CurrentUtcOffset": 0
+      },
+      "ListingNumber": 48,
+      "OrderingUrl": "http://order.subway.com/Stores/Redirect.aspx?s=565&sa=0&f=r&scc=US&spc=MI",
+      "CateringUrl": "https://www.ezcater.com/catering/pvt/subway-petoskey-w-mitchell-st",
+      "ExtendedProperties": null
+    },
+    {
+      "LocationId": {
+        "StoreNumber": 16728,
+        "SatelliteNumber": 0
+      },
+      "Address": {
+        "Address1": "14077 St Hwy M-28",
+        "Address2": "",
+        "Address3": "Total-1-Stop",
+        "City": "Newberry",
+        "StateProvCode": "MI",
+        "PostalCode": "49868",
+        "CountryCode": "US",
+        "CountryCode3": "USA"
+      },
+      "Geo": {
+        "Latitude": 46.3032,
+        "Longitude": -85.5116,
+        "TimeZoneId": "America/Detroit",
+        "CurrentUtcOffset": 0
+      },
+      "ListingNumber": 49,
+      "OrderingUrl": "http://order.subway.com/Stores/Redirect.aspx?s=16728&sa=0&f=r&scc=US&spc=MI",
+      "CateringUrl": "https://www.ezcater.com/catering/pvt/subway-newberry-m",
+      "ExtendedProperties": null
+    },
+    {
+      "LocationId": {
+        "StoreNumber": 35103,
+        "SatelliteNumber": 0
+      },
+      "Address": {
+        "Address1": "1600 Anderson Rd",
+        "Address2": "",
+        "Address3": "Wal-Mart #2417",
+        "City": "Petoskey",
+        "StateProvCode": "MI",
+        "PostalCode": "49770",
+        "CountryCode": "US",
+        "CountryCode3": "USA"
+      },
+      "Geo": {
+        "Latitude": 45.3505,
+        "Longitude": -84.9734,
+        "TimeZoneId": "America/Detroit",
+        "CurrentUtcOffset": 0
+      },
+      "ListingNumber": 50,
+      "OrderingUrl": "http://order.subway.com/Stores/Redirect.aspx?s=35103&sa=0&f=r&scc=US&spc=MI",
+      "CateringUrl": "https://www.ezcater.com/catering/pvt/subway-petoskey-anderson-rd",
+      "ExtendedProperties": null
+    }
+  ],
+  "AdditionalData": [
+    {
+      "Name": "favorites",
+      "Items": []
+    }
+  ],
+  "ResultHtml": [
+    "",
+    "<div class=\"locationsList\">",
+    "<h2><span class='sr-only'>Results</span></h2>",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "</div>",
+    "\r\n<div class=\"pickupCta\">\r\n    <div class=\"pickupCtaTop\">\r\n        <div></div>\r\n    </div>\r\n    <div class=\"pickupButtonWrapper\">\r\n        <button type=\"button\" class=\"pickupCtaButton primaryCta\">PICK UP HERE</button>\r\n        <button type=\"button\" class=\"cateringCtaButton primaryCta\">ORDER CATERING HERE</button>\r\n    </div>\r\n</div>\r\n"
+  ],
+  "PagingHtml": "\r\n<div class=\"pagingHolder\" role=\"navigation\">\r\n    <div class=\"buttonHolder\">\r\n        \r\n            <button type=\"button\" aria-label=\"PREVIOUS\" class=\"sprite-prev-page-arrow pagingButton disabled\" >PREVIOUS</button>\r\n        \r\n    </div>\r\n    <div class=\"locatorResultsPaging\">PAGE &nbsp;1 &nbsp;OF &nbsp;1</div>\r\n    <div class=\"buttonHolder\">\r\n        \r\n            <button type=\"button\"aria-label=\"NEXT\" class=\"sprite-next-page-arrow pagingButton  disabled\" >NEXT</button>\r\n        \r\n    </div>\r\n</div>",
+  "ResultsHeadingHtml": null,
+  "LocationTypesHtml": null
+}

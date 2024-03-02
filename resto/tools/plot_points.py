@@ -1,3 +1,4 @@
+from collections import Counter
 import folium
 
 from resto.borders import Borders
@@ -7,7 +8,7 @@ from resto import locations as location_loader
 from resto.overlap import compute_overlaps2, compute_overlaps_strtree
 from resto.voronoi import Vor
 
-COLOR = {'mc-us': 'yellow', 'sb-us': 'blue'}
+COLOR = {'tims': 'red', 'sb': 'green', 'lcbo': 'blue', 'ct': 'black'}
 
 
 def plot_points(m, points_dict):
@@ -29,24 +30,35 @@ ST = sys.argv[1]
 logging.basicConfig(level=logging.INFO)
 
 bounds = Borders.for_state(ST)
-census_areas = list(CensusArea.for_state(ST))
 
 # points = location_loader.for_state(['sb-us', 'mc-us'], ST)
-points = location_loader.within(['sb-us', 'mc-us'], bounds.multipoly())
-print(len(census_areas), 'census areas')
-vor_regions = Vor(points).clipped_regions(bounds.hull(), finite=True)
-print(len(vor_regions), 'locations')
+#locations = location_loader.within(['tims', 'sb', 'ct', 'lcbo'], bounds.multipoly())
+locations = location_loader.within(['tims', 'subway'], bounds.multipoly())
+print(len(locations), 'total locations')
+cnt = Counter(loc.tag for loc in locations)
+for t in cnt:
+    print('\t', t, cnt[t])
 
-overlaps = compute_overlaps_strtree(census_areas, vor_regions)
+if True:
+
+    vor_regions = Vor(locations).clipped_regions(bounds.hull(), finite=True)
+    print(len(vor_regions), 'locations')
+
+    census_areas = list(CensusArea.for_state(ST))
+    print(len(census_areas), 'census areas')
+
+    overlaps = compute_overlaps_strtree(census_areas, vor_regions)
 
 
 m.plot_border(bounds)
-#for (tag, region) in vor_regions:
-#    m.plot_region(tag, region)
+#for region in vor_regions:
+#    m.plot_vor_region(region)
 #m.plot_census_areas(census_areas)
 for x in overlaps:
     m.plot_pop_region(x)
-plot_points(m, points)
+for loc in locations:
+    m.plot_location(loc)
+
 
 m.m.save('out.html')
 

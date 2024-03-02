@@ -61,13 +61,19 @@ class Fetcher:
         return data
 
     def _page(self, lat, lon):
+        result = self.raw(lat, lon)
+
+        full = self.spec.unpack(result)
+        return [self.spec.clean(node) for node in full.values()]
+
+    def raw(self, lat, lon):
         url = self.url(lat, lon)
         headers = self.spec.headers()
 
-        logging.info('fetch %s', url)
+        logging.info('fetch %s (%.3f, %.3f)', url, lat, lon)
         if self.spec.method == 'post':
-            body = '&'.join(f'{k}={v}' for (k, v) in self.spec.form_body(lat, lon).items())
-            func = lambda: requests.post(url, headers=headers, data=body, timeout=30)
+            body = self.spec.body(lat, lon)
+            func = lambda: requests.post(url, headers=headers, data=body, timeout=60)
   
         else:
             func = lambda: requests.get(url,headers=headers, timeout=10)
@@ -76,7 +82,8 @@ class Fetcher:
             print(resp.status_code)
             print(resp.text)
             raise Exception(resp.status_code, resp.text)
-        result = resp.json()
+        result = self.spec.data(resp)
+        return result
 
         full = self.spec.unpack(result)
         return [self.spec.clean(node) for node in full.values()]

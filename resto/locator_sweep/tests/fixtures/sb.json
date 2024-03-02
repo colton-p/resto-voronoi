@@ -1,0 +1,160 @@
+{
+  "paging": {
+    "total": 1,
+    "offset": 0,
+    "limit": 50,
+    "returned": 1
+  },
+  "stores": [
+    {
+      "recommendation": {
+        "isUsual": false
+      },
+      "storeNumber": "58845-293098",
+      "id": "1026093",
+      "name": "1935 Paris Street",
+      "phoneNumber": "7055077062",
+      "coordinates": {
+        "latitude": 46.45326,
+        "longitude": -81.00264
+      },
+      "regulations": [],
+      "address": {
+        "streetAddressLine1": "1935 Paris Street",
+        "streetAddressLine2": null,
+        "streetAddressLine3": null,
+        "city": "Sudbury",
+        "countrySubdivisionCode": "ON",
+        "countryCode": "CA",
+        "postalCode": "P3E 3C6"
+      },
+      "timeZoneInfo": {
+        "currentTimeOffset": -300,
+        "windowsTimeZoneId": "Eastern Standard Time",
+        "olsonTimeZoneId": "GMT-04:00 America/Toronto"
+      },
+      "brandName": "Starbucks",
+      "ownershipTypeCode": "CO",
+      "curbside": {
+        "state": "notSupported"
+      },
+      "acceptsNonSvcMop": true,
+      "open": false,
+      "openStatusText": "Closed",
+      "warnings": [
+        "Store closed"
+      ],
+      "addressLines": [
+        "1935 Paris Street"
+      ],
+      "mop": {
+        "ready": false,
+        "wait": null
+      },
+      "schedule": [
+        {
+          "dayName": "Today",
+          "hours": "6:00 a.m. to 9:00 p.m.",
+          "open": true,
+          "holiday": ""
+        },
+        {
+          "dayName": "Tomorrow",
+          "hours": "6:30 a.m. to 8:00 p.m.",
+          "open": true,
+          "holiday": ""
+        },
+        {
+          "dayName": "Sunday",
+          "hours": "6:30 a.m. to 8:00 p.m.",
+          "open": true,
+          "holiday": ""
+        },
+        {
+          "dayName": "Monday",
+          "hours": "6:00 a.m. to 9:00 p.m.",
+          "open": true,
+          "holiday": ""
+        },
+        {
+          "dayName": "Tuesday",
+          "hours": "6:00 a.m. to 9:00 p.m.",
+          "open": true,
+          "holiday": ""
+        },
+        {
+          "dayName": "Wednesday",
+          "hours": "6:00 a.m. to 9:00 p.m.",
+          "open": true,
+          "holiday": ""
+        },
+        {
+          "dayName": "Thursday",
+          "hours": "6:00 a.m. to 9:00 p.m.",
+          "open": true,
+          "holiday": ""
+        }
+      ],
+      "features": [
+        {
+          "code": "GO",
+          "name": "Starbucks Wi-Fi"
+        },
+        {
+          "code": "SE",
+          "name": "Mobile Multi Tender"
+        },
+        {
+          "code": "DR",
+          "name": "Redeem Rewards"
+        },
+        {
+          "code": "LU",
+          "name": "Chilled Lunch"
+        },
+        {
+          "code": "UC",
+          "name": "UCP"
+        },
+        {
+          "code": "NB",
+          "name": "Nitro Cold Brew"
+        },
+        {
+          "code": "WA",
+          "name": "Oven-Warmed Food"
+        },
+        {
+          "code": "UE",
+          "name": "Uber Eats"
+        },
+        {
+          "code": "DD",
+          "name": "DoorDash"
+        },
+        {
+          "code": "SK",
+          "name": "SkipTheDishes"
+        },
+        {
+          "code": "16",
+          "name": "In store"
+        },
+        {
+          "code": "DL",
+          "name": "Delivery"
+        },
+        {
+          "code": "XO",
+          "name": "Mobile Order and Pay"
+        }
+      ],
+      "slug": "1935-paris-street-1935-paris-street-sudbury-on-p-3-e-3-c-6-ca"
+    }
+  ],
+  "coordinates": {
+    "lat": 46.38,
+    "lng": -82
+  },
+  "includesRecommendedLocations": false
+}

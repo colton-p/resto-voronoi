@@ -9,10 +9,12 @@ from shapely.geometry import Polygon
 from resto.borders import Borders
 
 COLOR = {
-    'sb-us': 'green',
-    'sb-ca': 'green',
-    'mc-us': 'yellow',
-    'mc-ca': 'yellow',
+    'sb': 'green',
+    'mc': 'yellow',
+    'tims': 'red',
+    'lcbo': 'blue',
+    'ct': 'purple',
+    'subway': 'yellow',
 }
 
 
@@ -40,7 +42,7 @@ class Map:
     def plot_location(self, location: Location):
         folium.CircleMarker(
             location=location.point,
-            color='black',#COLOR.get(location.tag, 'black'),
+            color=COLOR.get(location.tag, 'black'),
             radius=5,
             fill=False,
             tooltip=f'{location.name}'

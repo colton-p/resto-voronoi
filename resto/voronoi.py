@@ -97,22 +97,7 @@ class Vor:
     compute voronoi cells for tagged points {tag -> List[LatLon]}
     """
     def __init__(self, points: Dict[str, List[LatLon]]) -> None:
-        # tag -> List[LatLon]
-        #self.points = points
-        self.points = {
-            tag: [loc.point for loc in locs]
-            for (tag, locs) in points.items()
-        }
-
-    def clipped_points(self, hull: Polygon):
-        """
-        tag -> points for only points within hull
-        """
-        return {
-            tag: [pt for pt in points if hull.contains(Point(pt))]
-            for (tag, points)
-            in self.points.items()
-        }
+        self.points = [(loc.tag, loc.point) for loc in points]
 
     def clipped_regions(self, hull: Polygon, finite=True) -> List[VorRegion]:
         """
@@ -140,13 +125,12 @@ class Vor:
         compute voronoi region for each point.
         returns regions grouped by tag: tag -> List[Polygon]
         """
-        point_labels = list(itertools.chain(
-            *[[tag] * len(self.points[tag]) for tag in self.points]
-        ))
-        points = list(itertools.chain(*self.points.values()))
+        point_labels = [tag for (tag, _) in self.points]
+        points = [pt for (_, pt) in self.points]
+
         vor = spatial.Voronoi(points)
 
-        polys = {tag: [] for tag in self.points.keys()}
+        polys = defaultdict(list)
         if finite:
             point_region, vertices = voronoi_finite_polygons_2d(vor)
         else:
