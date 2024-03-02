@@ -1,4 +1,4 @@
-from collections import namedtuple
+from collections import namedtuple, defaultdict
 import itertools
 from typing import Dict, Iterator, List, Tuple
 

@@ -1,4 +1,5 @@
 import math
+import logging
 
 import haversine
 from shapely.geometry import Polygon, Point
@@ -15,11 +16,12 @@ def circle(pt, radius, num_points = 16):
     return points
 
 class Sweeper:
-    def __init__(self, fetcher: Fetcher, boundary: Polygon) -> None:
+    def __init__(self, fetcher: Fetcher, boundary: Polygon, start_pt=None) -> None:
         self.fetcher = fetcher
         self.boundary = boundary # the bounds for exploration
         self.cover = Polygon() # the currently explored area
         self.queries = 0
+        self.start_pt = start_pt
 
     @property
     def frontier(self):
@@ -35,17 +37,20 @@ class Sweeper:
         self.queries += 1
 
         if not points:
-            return self.fetcher.max_range, []
+            return self.fetcher.max_range(*pt), []
 
-        furthest = points[-1]
-        radius = haversine.haversine(pt, furthest.point) * 1000
-        radius = max(int(radius), 1)
+        if len(points) >= 0:
+            furthest = points[-1]
+            radius = haversine.haversine(pt, furthest.point) * 1000
+            radius = max(int(radius), 1)
+        else:
+            radius = self.fetcher.max_range(*pt)
         return radius, points
 
     def points_to_explore(self):
         """points to explore next, on the frontier of the currently explored area"""
         if self.cover.is_empty:
-            return [self.boundary.centroid.coords[0]]
+            return [self.start_pt or self.boundary.centroid.coords[0]]
         qs = []
         exterior = self.frontier
         if not exterior.is_empty:
@@ -58,16 +63,18 @@ class Sweeper:
     def sweep_once(self):
         """yield points, from one round of queries, expanding the explored area"""
         for q_pt in self.points_to_explore():
-            (radius, points) = self.explore(q_pt)
+            (radius, records) = self.explore(q_pt)
+            if records:
+                logging.info('got %d records, radius=%d', len(records), radius)
 
             new_covered = Polygon(circle(q_pt, radius)).intersection(self.boundary)
             self.cover = self.cover.union(new_covered)
             if not isinstance(self.cover, Polygon):
                 self.cover = max(self.cover.geoms, key=lambda x: x.area)
 
-            for pt in points:
-                if self.boundary.contains(Point(pt[4:])):
-                    yield pt
+            for rec in records:
+                if self.boundary.contains(Point(*rec.point)):
+                    yield rec
 
     def sweep(self, max_iters=10):
         for _ in range(max_iters):

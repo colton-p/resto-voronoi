@@ -2,6 +2,7 @@ from collections import namedtuple
 import logging
 import json
 import os
+import sqlite3
 from typing import Dict, List
 
 import haversine
@@ -17,19 +18,22 @@ def _location_from_data(data, tag):
     record = load_store_record(data)
     return Location(tag, record.name, record.state, record.point)
 
-
 def from_predicate(tags, pred=lambda x, y: True) -> Dict[str, List[Location]]:
     all_data = {}
-    for tag in tags:
-        path = os.path.join(os.environ['RESTO_DATA_DIR'], f'output/locations/{tag}.json')
-        with open(path, 'r', encoding='utf8') as f:
-            records = (_location_from_data(r, tag) for r in json.load(f))
-            all_data[tag] = [
-                rec for rec in records
-                if pred(*rec.point)
-            ]
-            logging.info('%d locations for %s', len(all_data[tag]), tag)
-    return all_data
+
+    with sqlite3.connect('locations.db') as con:
+        cur = con.cursor()
+        res = cur.execute(
+            f"SELECT tag, name, state, lat, lon from locations where tag IN ({','.join('?' for _ in tags)})",
+            tags
+        )
+        records = [
+            Location(tag, name, state, LatLon(lat, lon))
+            for (tag, name, state, lat, lon) in res
+        ]
+        logging.info('%d records from db', len(records))
+
+        return [rec for rec in records if pred(*rec.point)]
 
 def nearby(tags, pt=(43.5, -80.5), dist=50):
     def nearby_pred(lat, lon):

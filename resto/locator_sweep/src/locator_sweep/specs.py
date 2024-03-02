@@ -59,6 +59,7 @@ class McDonalds(Spec):
         return StoreRecord(
             id=store_id,
             name=name,
+            city=node["properties"]["address3"],
             state=node["properties"]["subDivision"],
             country=store_id.split("-")[1],
             point=LatLon(
@@ -100,6 +101,7 @@ class Starbucks(Spec):
         return StoreRecord(
             id=node["id"],
             name=node["name"],
+            city=node["address"]["city"],
             state=node["address"]["countrySubdivisionCode"],
             country=node["address"]["countryCode"],
             point=LatLon(
@@ -134,10 +136,11 @@ class CanadianTire(Spec):
         return {node["id"]: node for node in data["stores"]}
 
     def clean(self, node):
-        (state, country) = node["address"]["region"]["isocode"].split("-")
+        (country, state) = node["address"]["region"]["isocode"].split("-")
         return StoreRecord(
-            id=node["id"],
+            id=str(node["id"]),
             name=node["displayName"],
+            city=node['address']['town'],
             state=state,
             country=country,
             point=LatLon(

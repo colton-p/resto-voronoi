@@ -9,9 +9,9 @@ from locator_sweep.specs import Spec, StoreRecord, LatLon
 CACHE_DIR = os.environ.get('RESTO_CACHE_DIR', os.environ['HOME'] + '/.resto-cache')
 
 def load_store_record(data):
-    (id, name, state, country, (lat, lon)) = data
+    (id, name, city, state, country, (lat, lon)) = data
     return StoreRecord(
-        id, name, state, country,
+        id, name, city, state, country,
         point=LatLon(lat, lon)
     )
 
@@ -39,20 +39,19 @@ class Fetcher:
     def __init__(self, spec: Spec):
         self.spec: Spec = spec
 
-    @property
-    def max_range(self):
-        return self.spec.max_range
+    def max_range(self, lat, lon):
+        return self.spec.max_range(lat, lon)
 
     def url(self, lat, lon):
         # TODO: build properly
         qs = '&'.join(f'{k}={v}' for (k, v) in self.spec.query_args(lat, lon).items())
         return f'{self.spec.base_url}?{qs}'
 
-    def page(self, lat, lon):
+    def page(self, lat, lon, force=False):
         filename = f'{self.spec.__class__.__name__}_{lat:.4f}_{lon:.4f}.json'
         path = os.path.join(CACHE_DIR, filename)
 
-        if os.path.exists(path):
+        if os.path.exists(path) and not force:
             with open(path, 'r', encoding='utf8') as infile:
                 return [load_store_record(r) for r in json.load(infile)]
 

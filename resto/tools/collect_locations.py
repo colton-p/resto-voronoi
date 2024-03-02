@@ -9,7 +9,7 @@ from locator_sweep.fetcher import Fetcher
 from locator_sweep.sweeper import Sweeper
 from locator_sweep.sweep import collect_points, collect_points_visualize
 
-from shapes.borders import Borders
+from resto.borders import Borders
 
 
 def main(args):
@@ -19,10 +19,11 @@ def main(args):
     if args.state == 'canada':
         boundary = boundary.intersection(box(40, -150, 75, -40))
 
-    sweeper = Sweeper(fetcher, boundary)
+    start_pt = None#(41.9254933397265, -82.51075608236694)
+    sweeper = Sweeper(fetcher, boundary, start_pt=start_pt)
 
     if args.visualize:
-        (points, folium_map) = collect_points_visualize(sweeper, args.iters)
+        (points, folium_map) = collect_points_visualize(args.tag, sweeper, args.iters)
         folium_map.save(args.visualize)
     else:
         (points) = collect_points(sweeper, args.iters)
