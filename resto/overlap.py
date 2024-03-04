@@ -45,7 +45,7 @@ def compute_overlaps2(census_areas: List[CensusArea], vor_regions: List[VorRegio
 
 def compute_overlaps_strtree(census_areas: List[CensusArea], vor_regions: List[VorRegion]):
     logging.info('compute overlaps: census_areas=%d vor_regions=%d', len(census_areas), len(vor_regions))
-    results = []
+    results: List[PopRegion] = []
     tree = strtree.STRtree([ca.poly for ca in census_areas])
     for (ix, region) in enumerate(vor_regions):
         reg_pop = reg_n = 0
