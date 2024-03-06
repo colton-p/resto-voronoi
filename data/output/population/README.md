@@ -1,0 +1,1 @@
+Use `resto/population/extract_pop_{canada, us}.py` to build population csvs.
