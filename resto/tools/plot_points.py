@@ -1,5 +1,6 @@
 import argparse
 from collections import Counter
+import logging
 
 from resto.borders import Borders
 from resto.census_area import CensusArea
@@ -8,24 +9,9 @@ from resto import locations as location_loader
 from resto.overlap import compute_overlaps2, compute_overlaps_strtree
 from resto.voronoi import Vor
 
-COLOR = {'tims': 'red', 'sb': 'green', 'lcbo': 'blue', 'ct': 'black'}
 
-
-def plot_points(m, points_dict):
-    for (tag, points) in points_dict.items():
-        for pt in points:
-            m.plot_location(pt)
-
-m = Map()
-# border shape --> Borders
-# swept data --> Location --Vor--> VorRegion ---> |
-# census shape |                                  | compute overlap --> PopRegion
-# population   |  -->      CensusArea        ---> |
-#
-
-import sys
-import logging
 def main(args):
+    m = Map()
     if not args.quiet:
         logging.basicConfig(level=logging.INFO)
 
@@ -80,7 +66,7 @@ def main(args):
             rslt[o.tag] += o.pop
 
         for (tag, pop) in rslt.most_common():
-            print(tag, pop)
+            print(f'{tag:8s} {pop:7d}')
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
