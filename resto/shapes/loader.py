@@ -9,6 +9,7 @@ from shapely.geometry import Polygon
 import shapefile
 
 from resto.shapes.prefixes import PROV_PREFIX, STATE_PREFIX
+from resto.states import USA_48, USA_ALIASES
 
 SHAPES_DIR = os.path.join(
     os.environ['RESTO_DATA_DIR'],
@@ -24,24 +25,27 @@ def _shape_to_polys(shape, tx):
     ]
 
 
-def load_borders_from_shapefile(filepath, prefix, pt_tx, get_id) -> Iterator[Tuple[str, List[Polygon]]]:
-    sf_path = os.path.join(SHAPES_DIR, filepath)
-    sf = shapefile.Reader(sf_path, encoding="latin1")
-    logging.info(filepath)
-    logging.info(sf)
-    def shapes():
-        for sr in sf.iterShapeRecords():
-            geo_id = get_id(sr.record)
-            if geo_id.startswith(prefix):
-                yield geo_id, sr.shape
+def load_borders_from_shapefiles(filepaths, pt_tx, get_id, pred) -> Iterator[Tuple[str, List[Polygon]]]:
+    for filepath in filepaths:
+        sf_path = os.path.join(SHAPES_DIR, filepath)
+        sf = shapefile.Reader(sf_path, encoding="latin1")
+        logging.info(filepath)
+        logging.info(sf)
+        def shapes():
+            for sr in sf.iterShapeRecords():
+                geo_id = get_id(sr.record)
+                if pred(geo_id):
+                    yield geo_id, sr.shape
+                #if geo_id.startswith(prefix):
+                #    yield geo_id, sr.shape
 
-    for (geo_id, shape) in shapes():
-        polys = [
-            poly.simplify(10**-3)
-            for poly in
-            _shape_to_polys(shape, pt_tx)
-        ]
-        yield geo_id, polys
+        for (geo_id, shape) in shapes():
+            polys = [
+                poly.simplify(10**-3)
+                for poly in
+                _shape_to_polys(shape, pt_tx)
+            ]
+            yield geo_id, polys
 
 class ShapeLoader:
     @staticmethod
@@ -59,6 +63,10 @@ class CanadaShapeLoader(ShapeLoader):
     def geo_prefix(self):
         return str(PROV_PREFIX[self.state])
     @property
+    def record_predicate(self):
+        prefix = self.geo_prefix
+        return lambda record_id: record_id.startswith(prefix)
+    @property
     def point_transform(self):
         can_txer = pyproj.Transformer.from_crs(3347, 4326)
         return can_txer.transform
@@ -66,13 +74,22 @@ class CanadaShapeLoader(ShapeLoader):
     def state_shapefile(self):
         return 'canada/lpr_000a21a_e'
     @property
-    def census_shapefile(self):
-        return 'canada_census/lda_000b21a_e'
+    def census_shapefiles(self):
+        return ['canada_census/lda_000b21a_e']
     @property
     def census_record_id(self):
         return lambda record: record[0]
 
 class UsaShapeLoader(ShapeLoader):
+    @property
+    def record_predicate(self):
+        if self.state == 'usa':
+            # exclude ak, hi, usvi
+            prefixes = {str(STATE_PREFIX[st]) for st in USA_48}
+            return lambda record_id: record_id[0:2] in prefixes
+
+        prefix = self.geo_prefix
+        return lambda record_id: record_id.startswith(prefix)
     @property
     def geo_prefix(self):
         return str(STATE_PREFIX[self.state])
@@ -81,13 +98,15 @@ class UsaShapeLoader(ShapeLoader):
         return lambda x, y: (y, x)
     @property
     def state_shapefile(self):
-        if self.state == 'usa':
-            return 'us/cb_2018_us_nation_20m'
         return 'us/cb_2018_us_state_20m'
     @property
-    def census_shapefile(self):
-        prefix = STATE_PREFIX[self.state]
-        return f'us_census/cb_2021_{prefix}_bg_500k/cb_2021_{prefix}_bg_500k'
+    def census_shapefiles(self):
+        states = USA_ALIASES.get(self.state, [self.state])
+        def _files():
+            for state in states:
+                prefix = STATE_PREFIX[state]
+                yield f'us_census/cb_2021_{prefix}_bg_500k/cb_2021_{prefix}_bg_500k'
+        return list(_files())
     @property
     def census_record_id(self):
         return lambda record: record[5]
@@ -96,19 +115,19 @@ class UsaShapeLoader(ShapeLoader):
 def state_borders(state):
     logging.info('load state borders for %s', state)
     loader = ShapeLoader.for_state(state)
-    return load_borders_from_shapefile(
-        loader.state_shapefile,
-        loader.geo_prefix,
-        loader.point_transform,
-        lambda record: record[0],
+    return load_borders_from_shapefiles(
+        [loader.state_shapefile],
+        pt_tx=loader.point_transform,
+        get_id=lambda record: record[0],
+        pred=loader.record_predicate,
     )
 
 def census_borders(state):
     logging.info('load census borders for %s', state)
     loader = ShapeLoader.for_state(state)
-    return load_borders_from_shapefile(
-        loader.census_shapefile,
-        loader.geo_prefix,
-        loader.point_transform,
-        loader.census_record_id
+    return load_borders_from_shapefiles(
+        loader.census_shapefiles,
+        pt_tx=loader.point_transform,
+        get_id=loader.census_record_id,
+        pred=loader.record_predicate,
     )

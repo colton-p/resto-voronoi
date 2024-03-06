@@ -11,6 +11,7 @@ from shapely.geometry import box as Box, Point
 from locator_sweep.fetcher import load_store_record
 from locator_sweep.specs import LatLon
 from resto.borders import Borders
+from resto.states import USA_ALIASES, CANADA_ALIASES
 
 Location = namedtuple('Location', ['tag', 'name', 'state', 'point'])
 
@@ -19,8 +20,6 @@ def _location_from_data(data, tag):
     return Location(tag, record.name, record.state, record.point)
 
 def from_predicate(tags, pred=lambda x, y: True) -> Dict[str, List[Location]]:
-    all_data = {}
-
     with sqlite3.connect('locations.db') as con:
         cur = con.cursor()
         res = cur.execute(
@@ -47,5 +46,22 @@ def within(tags, box=Box(43, -81, 44, -80)):
 
     return from_predicate(tags, within_pred)
 
-def for_state(tags, state):
+def for_state_borders(tags, state):
     return within(tags, Borders.for_state(state).multipoly())
+
+def for_state(tags, state):
+    states = (CANADA_ALIASES | USA_ALIASES).get(state, [state])
+    query = f"SELECT tag, name, state, lat, lon from locations WHERE tag IN ({','.join('?' for _ in tags)})"
+    query += f" AND state IN ({','.join('?' for _ in states)})"
+    args = tags + [st.upper() for st in states]
+
+    with sqlite3.connect('locations.db') as con:
+        cur = con.cursor()
+        res = cur.execute(query, args)
+        records = [
+            Location(tag, name, state, LatLon(lat, lon))
+            for (tag, name, state, lat, lon) in res
+        ]
+        logging.info('%d records from db', len(records))
+
+        return records

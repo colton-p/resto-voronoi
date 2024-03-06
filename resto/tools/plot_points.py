@@ -31,11 +31,13 @@ def main(args):
 
     bounds = Borders.for_state(args.state)
 
-    locations = location_loader.within(args.tags, bounds.multipoly())
-    print(len(locations), 'total locations')
-    loc_count = Counter(loc.tag for loc in locations)
-    for t in loc_count:
-        print('\t', t, loc_count[t])
+    if args.plot_locations or args.plot_voronoi or args.plot_overlaps:
+        #locations = location_loader.within(args.tags, bounds.multipoly())
+        locations = location_loader.for_state(args.tags, args.state)
+        print(len(locations), 'total locations')
+        loc_count = Counter(loc.tag for loc in locations)
+        for t in loc_count:
+            print('\t', t, loc_count[t])
 
     if args.plot_voronoi or args.plot_overlaps:
         vor_regions = Vor(locations).clipped_regions(bounds.hull(), finite=True)
@@ -66,6 +68,12 @@ def main(args):
     m.m.save('out.html')
 
     if args.plot_overlaps:
+        print('')
+        o = max(overlaps, key=lambda x: x.pop)
+        print(' max pop:', o.pop, o.tag, o.poly.centroid)
+        o = min(overlaps, key=lambda x: x.pop)
+        print(' min pop:', o.pop, o.tag, o.poly.centroid)
+
         print('')
         rslt = Counter()
         for o in overlaps:

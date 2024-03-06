@@ -11,7 +11,7 @@ class Borders:
         def polys():
             for _geoid, polys in state_borders(state):
                 for poly in polys:
-                    yield poly # TODO: simplify?
+                    yield poly
 
         return Borders(list(polys()))
 

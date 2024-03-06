@@ -1,6 +1,7 @@
 import csv
 
 import resto.population.paths as paths
+from resto.states import USA_50
 
 def pops_for_state(state):
     header_name = paths.US.header_path(state)
@@ -38,9 +39,6 @@ def write_pops(state):
         writer.writerows(pops_for_state(state))
 
 
-STATES = {'ak', 'al', 'ar', 'az', 'ca', 'co', 'ct', 'de', 'fl', 'ga', 'hi', 'ia', 'id', 'il', 'in', 'ks', 'ky', 'la', 'ma', 'md', 'me', 'mi', 'mn', 'mo',
-          'ms', 'mt', 'nc', 'nd', 'ne', 'nh', 'nj', 'nm', 'nv', 'ny', 'oh', 'ok', 'or', 'pa', 'ri', 'sc', 'sd', 'tn', 'tx', 'ut', 'va', 'vt', 'wa', 'wi', 'wv', 'wy'}
-
 if __name__ == "__main__":
-    for st in STATES:
+    for st in USA_50:
         write_pops(st)

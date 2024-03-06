@@ -14,7 +14,7 @@ COLOR = {
     'tims': 'red',
     'lcbo': 'blue',
     'ct': 'purple',
-    'subway': 'yellow',
+    'subway': 'orange',
 }
 
 
@@ -24,7 +24,7 @@ class Map:
 
     def plot_border(self, borders: Borders):
         folium.Polygon(
-            borders.main().buffer(0.01).exterior.coords,
+            borders.hull().buffer(0.01).exterior.coords,
             color="cyan"
         ).add_to(self.m)
     

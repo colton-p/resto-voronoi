@@ -22,7 +22,7 @@ def _build_census_areas(state):
             pop = int(total_pop*poly.area / total_area)
             if pop > 0:
                 n_parts += 1
-                n_points += (len(poly.simplify(10**-2).exterior.coords) - 1)
+                n_points += (len(poly.exterior.coords) - 1)
                 yield CensusArea(
                     id=f'{geo_id}-{part_ix}',
                     poly=poly,
