@@ -11,10 +11,10 @@ def collect_points(sweeper: Sweeper, max_iters=10):
     return list(out_points)
 
 
-def collect_points_visualize(tag, sweeper: Sweeper, max_iters=10):
+def collect_points_visualize(db_path, tag, sweeper: Sweeper, max_iters=10):
     viz = Visualizer(sweeper)
 
-    with Persist(tag, 'locations.db') as cur:
+    with Persist(tag, db_path) as cur:
         out_points = set()
         for (ix, points) in enumerate(sweeper.sweep(max_iters)):
             out_points |= points

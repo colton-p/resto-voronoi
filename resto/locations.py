@@ -15,12 +15,14 @@ from resto.states import USA_ALIASES, CANADA_ALIASES
 
 Location = namedtuple('Location', ['tag', 'name', 'state', 'point'])
 
+DB_PATH = os.path.join(os.environ['RESTO_DATA_DIR'], 'output', 'locations', 'locations.db')
+
 def _location_from_data(data, tag):
     record = load_store_record(data)
     return Location(tag, record.name, record.state, record.point)
 
 def from_predicate(tags, pred=lambda x, y: True) -> Dict[str, List[Location]]:
-    with sqlite3.connect('locations.db') as con:
+    with sqlite3.connect(DB_PATH) as con:
         cur = con.cursor()
         res = cur.execute(
             f"SELECT tag, name, state, lat, lon from locations where tag IN ({','.join('?' for _ in tags)})",
@@ -55,7 +57,7 @@ def for_state(tags, state):
     query += f" AND state IN ({','.join('?' for _ in states)})"
     args = tags + [st.upper() for st in states]
 
-    with sqlite3.connect('locations.db') as con:
+    with sqlite3.connect(DB_PATH) as con:
         cur = con.cursor()
         res = cur.execute(query, args)
         records = [

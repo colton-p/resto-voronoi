@@ -10,7 +10,7 @@ from locator_sweep.sweeper import Sweeper
 from locator_sweep.sweep import collect_points, collect_points_visualize
 
 from resto.borders import Borders
-
+from resto.locations import DB_PATH
 
 def main(args):
     spec = Spec.for_tag(args.tag)
@@ -23,7 +23,7 @@ def main(args):
     sweeper = Sweeper(fetcher, boundary, start_pt=start_pt)
 
     if args.visualize:
-        (points, folium_map) = collect_points_visualize(args.tag, sweeper, args.iters)
+        (points, folium_map) = collect_points_visualize(DB_PATH, args.tag, sweeper, args.iters)
         folium_map.save(args.visualize)
     else:
         (points) = collect_points(sweeper, args.iters)
