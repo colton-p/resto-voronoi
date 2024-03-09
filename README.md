@@ -1,5 +1,8 @@
 # resto-voronoi
-Maps: https://colton-p.github.io/resto-voronoi/
+
+<img width="898" alt="image" src="https://github.com/colton-p/resto-voronoi/assets/57106756/fd0a8e29-ec8f-4501-8d1b-3dddb460aff9">
+More maps: https://colton-p.github.io/resto-voronoi/
+
 
 What's closer to you - a McDonalds, a Starbucks, or a Tim Hortons? For how many people in the country is that true?
 
@@ -19,12 +22,7 @@ In Canada:
 | Starbucks   |   6 458 296 |
 
 
-Plotting these areas makes a colorful map:
-
-<img width="898" alt="image" src="https://github.com/colton-p/resto-voronoi/assets/57106756/fd0a8e29-ec8f-4501-8d1b-3dddb460aff9">
-
-
-More maps: https://colton-p.github.io/resto-voronoi/
+Plotting these areas make colorful maps: https://colton-p.github.io/resto-voronoi/
 
 
 ## Structure
